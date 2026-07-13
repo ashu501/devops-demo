@@ -18,7 +18,11 @@ def multiply(a, b):
     """Multiply two numbers."""
     return a * b
 
-
+def divide(a, b):
+    """Divide a by b."""
+    if b == 0:
+        return "Cannot divide by zero"
+    return a / b
 def greet(name):
     """Return a greeting message."""
     return f"Hello, {name}! Welcome to the DevOps CI/CD demo."
