@@ -1,6 +1,6 @@
 """
 Simple demo application for CI/CD Pipeline demonstration.
-DevOps Lab - ACE Engineering College
+
 """
 
 
@@ -18,18 +18,30 @@ def multiply(a, b):
     """Multiply two numbers."""
     return a * b
 
+
 def divide(a, b):
     """Divide a by b."""
     if b == 0:
         return "Cannot divide by zero"
     return a / b
+
+
 def greet(name):
     """Return a greeting message."""
     return f"Hello, {name}! Welcome to the DevOps CI/CD demo."
 
 
+def run_demo():
+    """Returns the demo output as a list of strings - this makes it testable."""
+    lines = []
+    lines.append(greet("ACE Students"))
+    lines.append(f"2 + 3 = {add(2, 3)}")
+    lines.append(f"5 - 2 = {subtract(5, 2)}")
+    lines.append(f"4 * 6 = {multiply(4, 6)}")
+    lines.append(f"10 / 2 = {divide(10, 2)}")
+    return lines
+
+
 if __name__ == "__main__":
-    print(greet("ACE Students"))
-    print("2 + 3 =", add(2, 4))
-    print("5 - 2 =", subtract(5, 2))
-    print("4 * 6 =", multiply(4, 6))
+    for line in run_demo():
+        print(line)
