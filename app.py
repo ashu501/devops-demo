@@ -30,6 +30,6 @@ def greet(name):
 
 if __name__ == "__main__":
     print(greet("ACE Students"))
-    print("2 + 3 =", add(2, 3))
+    print("2 + 3 =", add(2, 4))
     print("5 - 2 =", subtract(5, 2))
     print("4 * 6 =", multiply(4, 6))
